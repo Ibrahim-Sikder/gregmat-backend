@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "lib": ["DOM", "ES2015"],
+        "outDir": "./build",
+        "rootDir": ".",
+        "strict": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "esModuleInterop": true,
+        "sourceMap": false,
+        "inlineSources": false,
+        "skipLibCheck": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "plugins": [
+            { "transform": "typescript-transform-paths" },
+            { "transform": "typescript-transform-paths", "afterDeclarations": true }
+        ],
+        "paths": {
+            "@auth/*": ["./src/features/auth/*"],
+            "@user/*": ["./src/features/user/*"],
+            "@gallery/*": ["./src/features/gallery/*"],
+            "@health/*": ["./src/features/health/*"],
+            "@recordings/*": ["./src/features/recordings/*"],
+            "@studyPlan/*": ["./src/features/studyPlan/*"],
+            "@quiz/*": ["./src/features/quiz/*"],
+            "@practice/*": ["./src/features/practice/*"],
+            "@mountain/*": ["./src/features/mountain/*"],
+            "@flashCard/*": ["./src/features/flashCard/*"],
+            "@prepswift/*": ["./src/features/prepswift/*"],
+            "@subscription/*": ["./src/features/subscription/*"],
+            "@dashboard/*": ["./src/features/dashboard/*"],
+            "@misc/*": ["./src/features/misc/*"],
+            "@global/*": ["./src/shared/globals/*"],
+            "@service/*": ["./src/shared/services/*"],
+            "@emails/*": ["./src/shared/services/emails/*"],
+            "@socket/*": ["./src/shared/sockets/*"],
+            "@worker/*": ["./src/shared/workers/*"],
+            "@constants/*": ["./src/shared/constants/*"],
+            "@root/*": ["./src/*"]
+        }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist", "build", "scripts", "**/*.spec.ts"]
+}
